@@ -1,0 +1,53 @@
+import Laboral.Persona;
+
+import java.util.regex.Pattern;
+
+public class Empleado extends Persona {
+
+    private int categoria;
+    public int anyosTrabajados;
+
+
+    public Empleado(String nombre, String dni, char sexo) throws DatosNoCorrectosException {
+        super(nombre, dni, sexo);
+        if ((!Pattern.matches("\\d{8}[A-HJ-NP-TV-Z]", dni))|| (!Pattern.matches("^[HFhf]", sexo + ""))) {
+            throw new DatosNoCorrectosException();
+        }
+        this.anyosTrabajados = 0;
+        this.categoria = 1;
+    }
+
+    public Empleado(String nombre, String dni, char sexo, int categoria, int anyosTrabajados) throws DatosNoCorrectosException {
+        super(nombre, dni, sexo);
+        if (!Pattern.matches(("^[HMhm]"), sexo + "") || (categoria < 1 || categoria > 10) || !Pattern.matches(("(\\d{8})([-]?)([A-Z]{1})"),dni) || anyosTrabajados<0) {
+            throw new DatosNoCorrectosException();
+        }
+
+        this.categoria = categoria;
+
+        this.anyosTrabajados = anyosTrabajados;
+    }
+
+
+    public void setCategoria(int categoria) throws DatosNoCorrectosException {
+        if (categoria < 0 || categoria > 10) {
+            throw new DatosNoCorrectosException();
+        }
+        this.categoria = categoria;
+    }
+
+    public int getCategoria() {
+        return categoria;
+    }
+    public int incrAnyo(int anyosTrabajados){
+        anyosTrabajados++;
+        return anyosTrabajados;
+    }
+
+
+    public String imprime() {
+        return "Empleado: "+this.nombre+".\nDNI: "+this.dni+
+                ".\nSexo: "+this.sexo+".\nAños trabajados: "+this.anyosTrabajados+
+                ".\nCategoría: "+categoria+".";
+    }
+}
