@@ -27,7 +27,7 @@ public class Persona {
         this.dni = dni;
     }
 
-    public String imprimir() {
+    public String imprime() {
         return "Empleado: "+this.nombre+"\nDNI: "+this.dni+".";
     }
 }
