@@ -13,7 +13,7 @@ public class Empleado extends Persona {
      */
     public Empleado(String nombre, String dni, char sexo) throws DatosNoCorrectosException {
         super(nombre, dni, sexo);
-        if ((!Pattern.matches("\\d{8}[A-HJ-NP-TV-Z]", dni))|| (!Pattern.matches("^[HFhf]", sexo + ""))) {
+        if ((!Pattern.matches("\\d{8}[A-HJ-NP-TV-Z]", dni))|| (!Pattern.matches("^[MFmf]", sexo + ""))) {
             throw new DatosNoCorrectosException();
         }
         this.anyosTrabajados = 0;
@@ -28,7 +28,7 @@ public class Empleado extends Persona {
      */
     public Empleado(String nombre, String dni, char sexo, int categoria, int anyosTrabajados) throws DatosNoCorrectosException {
         super(nombre, dni, sexo);
-        if (!Pattern.matches(("^[HMhm]"), sexo + "") || (categoria < 1 || categoria > 10) || !Pattern.matches(("(\\d{8})([-]?)([A-Z]{1})"),dni) || anyosTrabajados<0) {
+        if (!Pattern.matches(("^[FMfm]"), sexo + "") || (categoria < 1 || categoria > 10) || !Pattern.matches(("(\\d{8})([-]?)([A-Z]{1})"),dni) || anyosTrabajados<0) {
             throw new DatosNoCorrectosException();
         }
 
