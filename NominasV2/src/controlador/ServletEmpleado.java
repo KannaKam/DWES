@@ -39,17 +39,22 @@ public class ServletEmpleado extends HttpServlet {
 		    case "mostrar":
 		        mostrarEmpleado(request, response);
 		        break;
-		    case "buscar":
-		    	buscarEmpleados(request, response);
-		        break;
+		    case "gestionar":
+		    	break;
+		    case "form":
+		    	cargarFormulario(request, response);
+		    	break;
 		}
 	}
 
-	private void buscarEmpleados(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+	private void gestionarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 	}
-
+	
+private void cargarFormulario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	RequestDispatcher dispatcher = request.getRequestDispatcher("/form.jsp");
+    dispatcher.forward(request, response);
+	}
 	private void mostrarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		List < Empleado > listaEmpleado = EmpleadoDAO.mostrarEmpleados();

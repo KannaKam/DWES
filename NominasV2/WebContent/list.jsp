@@ -7,14 +7,25 @@
 <meta charset="ISO-8859-1">
 <title>Gestión de empleados</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+	.thead{
+		color: #fff;
+		background-color:#5BADB2;
+	}
+	.btn{
+		color: #fff;
+		background-color:#5BADB2;
+	}
+</style>
 </head>
 <body>
 	<div>
 		<div class="container">
                       <h1 class="text-center">Gestión de nominas</h1>   
                     </div>
-                    <table class="table text-center">
-                        <thead class="thead-dark">
+                    <div class="container">
+                    <table class="table text-center table-bordered">
+                        <thead class="thead">
                             <tr>
                                 <th>Nombre</th>
                                 <th>DNI</th>
@@ -47,6 +58,9 @@
                             </tbody>
 
                     </table>
+                    <a href="/NominasV2/ServletEmpleado?action=form" class="btn">Gestionar empleados</a>
+                    </div>
+                    
 	</div>
 </body>
 </html>
