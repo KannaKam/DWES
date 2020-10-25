@@ -39,8 +39,6 @@ public class ServletEmpleado extends HttpServlet {
 		    case "mostrar":
 		        mostrarEmpleado(request, response);
 		        break;
-		    case "gestionar":
-		    	break;
 		    case "form":
 		    	cargarFormulario(request, response);
 		    	break;
@@ -48,8 +46,15 @@ public class ServletEmpleado extends HttpServlet {
 	}
 
 	private void gestionarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		
-	}
+		String dni = request.getParameter("dni");
+		System.out.println(dni);
+		Empleado empleado = EmpleadoDAO.buscarEmpleado(dni);
+		request.setAttribute("empleado", empleado);
+		//Nomina nomina = NominaDAO.buscarNomina(dni);
+		//request.setAttribute("nomina", nomina);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/consulta.jsp");
+		dispatcher.forward(request, response);
+		}
 	
 private void cargarFormulario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 	RequestDispatcher dispatcher = request.getRequestDispatcher("/form.jsp");
@@ -67,6 +72,13 @@ private void cargarFormulario(HttpServletRequest request, HttpServletResponse re
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String action = request.getParameter("action");
+
+		switch (action) {
+		    case "gestionar":
+		    	gestionarEmpleado(request, response);
+		    	break;
+		}
 		doGet(request, response);
 	}
 

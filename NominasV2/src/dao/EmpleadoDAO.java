@@ -12,7 +12,7 @@ public class EmpleadoDAO {
 
 	private static final String datosEmpleado = "select * from empleados";
 	
-	private static final String empleadoPorDNI = "select * from empleados where dni = ?;";
+	private static final String empleadoPorDNI = "select nombre, dni, sexo, anyos, categoria from empleados where dni = ?;";
 
 	public static Connection getDBConnection() {
 		try {
@@ -55,7 +55,7 @@ public class EmpleadoDAO {
 		}
 		return empleados;
 	}
-	public Empleado buscarEmpleado(int dniPK) {
+	public static Empleado buscarEmpleado(String dniPK) {
 		Empleado empleado = null;
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -67,14 +67,14 @@ public class EmpleadoDAO {
 
 			rs = preparedStatement.executeQuery();
 
-			while (rs.next()) {
-				String nombre = rs.getString("nombre");
-				String dni = rs.getString("dni");
-				String sexo = rs.getString("sexo");
-				int anyos = rs.getInt("anyos");
-				int categoria = rs.getInt("categoria");
-				empleado = new Empleado(nombre, dni, sexo, anyos, categoria);
-			}
+            rs.absolute(1);
+                String nombre = rs.getString("nombre");
+                String dni = rs.getString("dni");
+                String sexo = rs.getString("sexo");
+                int anyos = rs.getInt("anyos");
+                int categoria = rs.getInt("categoria");
+                empleado =new Empleado(nombre, dni, sexo, anyos, categoria);
+                
 		} catch (SQLException e) {
 			System.out.println("El DNI introducido no pertenece a ningún empleado.");
 		}
