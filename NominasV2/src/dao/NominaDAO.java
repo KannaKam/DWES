@@ -34,6 +34,7 @@ public class NominaDAO {
 			connection = getDBConnection();
 
 			preparedStatement = connection.prepareStatement(empleadoPorDNI);
+			preparedStatement.setString(1, dniPK);
 
 			rs = preparedStatement.executeQuery();
 

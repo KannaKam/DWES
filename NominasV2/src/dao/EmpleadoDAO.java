@@ -64,6 +64,8 @@ public class EmpleadoDAO {
 			connection = getDBConnection();
 
 			preparedStatement = connection.prepareStatement(empleadoPorDNI);
+			
+			preparedStatement.setString(1, dniPK);
 
 			rs = preparedStatement.executeQuery();
 
