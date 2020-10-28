@@ -34,18 +34,15 @@ public class NominaDAO {
 			connection = getDBConnection();
 
 			preparedStatement = connection.prepareStatement(empleadoPorDNI);
-<<<<<<< Updated upstream
-=======
-			
->>>>>>> Stashed changes
+
 			preparedStatement.setString(1, dniPK);
 
 			rs = preparedStatement.executeQuery();
 
 			rs.absolute(1);
 				int sueldo = rs.getInt("sueldo");
-				String dni = rs.getString("dniEmpleado");
-				nomina = new Nomina(sueldo, dni);
+				
+				nomina = new Nomina(sueldo, dniPK);
 			
 		} catch (SQLException e) {
 			System.out.println("El DNI introducido no pertenece a ningún empleado.");

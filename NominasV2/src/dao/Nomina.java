@@ -23,4 +23,21 @@ public class Nomina {
         sueldo = SUELDO_BASE[categoria-1]+5000*empleado.getAnyos();
         return sueldo;
     }
+
+	public int getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(int sueldo) {
+		this.sueldo = sueldo;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+     
 }

@@ -54,7 +54,7 @@
                                     </td>
                                     <td>
                                     	<c:out value="${nomina.sueldo}" />
-                                    <td>
+                                    </td>
                                 </tr>
                             </tbody>
 
