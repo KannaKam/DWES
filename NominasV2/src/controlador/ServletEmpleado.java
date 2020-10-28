@@ -50,8 +50,8 @@ public class ServletEmpleado extends HttpServlet {
 		System.out.println(dni);
 		Empleado empleado = EmpleadoDAO.buscarEmpleado(dni);
 		request.setAttribute("empleado", empleado);
-		//Nomina nomina = NominaDAO.buscarNomina(dni);
-		//request.setAttribute("nomina", nomina);
+		Nomina nomina = NominaDAO.buscarNomina(dni);
+		request.setAttribute("nomina", nomina);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/consulta.jsp");
 		dispatcher.forward(request, response);
 		}
