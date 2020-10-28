@@ -42,12 +42,19 @@ public class ServletEmpleado extends HttpServlet {
 		    case "form":
 		    	cargarFormulario(request, response);
 		    	break;
+		    case "mostrarEditar":
+		    	cargarEditar(request, response);
+		    	break;
 		}
 	}
+	
+	private void cargarEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/editar.jsp");
+	    dispatcher.forward(request, response);
+		}
 
 	private void gestionarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String dni = request.getParameter("dni");
-		System.out.println(dni);
 		Empleado empleado = EmpleadoDAO.buscarEmpleado(dni);
 		request.setAttribute("empleado", empleado);
 		Nomina nomina = NominaDAO.buscarNomina(dni);
@@ -78,6 +85,7 @@ private void cargarFormulario(HttpServletRequest request, HttpServletResponse re
 		    case "gestionar":
 		    	gestionarEmpleado(request, response);
 		    	break;
+		    
 		}
 		doGet(request, response);
 	}

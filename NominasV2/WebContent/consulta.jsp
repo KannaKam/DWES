@@ -59,7 +59,7 @@
                             </tbody>
 
                     </table>
-                    <a href="/NominasV2/ServletEmpleado?action=edit" class="btn">Editar empleado</a>
+                    <a href="/NominasV2/ServletEmpleado?action=mostrarEditar" class="btn">Editar empleado</a>
                     </div>
                     
 	</div>
