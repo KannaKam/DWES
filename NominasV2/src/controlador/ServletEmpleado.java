@@ -42,31 +42,38 @@ public class ServletEmpleado extends HttpServlet {
 		    case "form":
 		    	cargarFormulario(request, response);
 		    	break;
-		    case "mostrarEditar":
-		    	cargarEditar(request, response);
-		    	break;
+		   
 		}
 	}
 	
-	private void cargarEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/editar.jsp");
-	    dispatcher.forward(request, response);
-		}
-
 	private void gestionarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String dni = request.getParameter("dni");
 		Empleado empleado = EmpleadoDAO.buscarEmpleado(dni);
-		request.setAttribute("empleado", empleado);
-		Nomina nomina = NominaDAO.buscarNomina(dni);
-		request.setAttribute("nomina", nomina);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/consulta.jsp");
-		dispatcher.forward(request, response);
+		if (empleado != null) {
+			request.setAttribute("empleado", empleado);
+			Nomina nomina = NominaDAO.buscarNomina(dni);
+			request.setAttribute("nomina", nomina);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/consulta.jsp");
+			dispatcher.forward(request, response);
+		}else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/error.jsp");
+			dispatcher.forward(request, response);
+		}
 		}
 	
-private void cargarFormulario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	private void cargarFormulario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 	RequestDispatcher dispatcher = request.getRequestDispatcher("/form.jsp");
     dispatcher.forward(request, response);
 	}
+	
+	private void editarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	String dni = request.getParameter("dni");
+	Empleado empleado = EmpleadoDAO.buscarEmpleado(dni);
+	request.setAttribute("empleado", empleado);
+	RequestDispatcher dispatcher = request.getRequestDispatcher("/editar.jsp");
+    dispatcher.forward(request, response);
+	}
+	
 	private void mostrarEmpleado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		List < Empleado > listaEmpleado = EmpleadoDAO.mostrarEmpleados();
@@ -84,6 +91,9 @@ private void cargarFormulario(HttpServletRequest request, HttpServletResponse re
 		switch (action) {
 		    case "gestionar":
 		    	gestionarEmpleado(request, response);
+		    	break;
+		    case "editar":
+		    	editarEmpleado(request, response);
 		    	break;
 		    
 		}

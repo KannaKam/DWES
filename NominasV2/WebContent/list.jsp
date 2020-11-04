@@ -10,11 +10,11 @@
 <style>
 	.thead{
 		color: #fff;
-		background-color:#5BADB2;
+		background-color:#2e5d94;
 	}
 	.btn{
 		color: #fff;
-		background-color:#5BADB2;
+		background-color:#2e5d94;
 	}
 </style>
 </head>

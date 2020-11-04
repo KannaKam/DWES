@@ -10,15 +10,18 @@
 <style>
 	.thead{
 		color: #fff;
-		background-color:#5BADB2;
+		background-color:#2e5d94;
 	}
 	.btn{
 		color: #fff;
-		background-color:#5BADB2;
+		background-color:#2e5d94;
 	}
 </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark">
+                <a href="/NominasV2/ServletEmpleado?action=form"><img src="back.png"></a>
+                </nav>
 	<div>
 		<div class="container">
                       <h1 class="text-center">Gestión de nominas</h1>   
@@ -59,7 +62,11 @@
                             </tbody>
 
                     </table>
-                    <a href="/NominasV2/ServletEmpleado?action=mostrarEditar" class="btn">Editar empleado</a>
+                    <form method="post" action="/NominasV2/ServletEmpleado?action=editar&dni=${empleado.dni}">
+						<div class="container">
+						<p><input type="submit" value="Editar empleado" class="btn"></p>
+						</div>
+                    </form>
                     </div>
                     
 	</div>

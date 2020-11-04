@@ -9,15 +9,18 @@
 <style>
 	.thead{
 		color: #fff;
-		background-color:#5BADB2;
+		background-color:#2e5d94;
 	}
 	.btn{
 		color: #fff;
-		background-color:#5BADB2;
+		background-color:#2e5d94;
 	}
 </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-md navbar-dark">
+                <a href="/NominasV2/ServletEmpleado?action=mostrar"><img src="back.png"></a>
+                </nav>
 	<form method="post" action="/NominasV2/ServletEmpleado?action=gestionar">
 	<div class="container">
 		Introduzca el DNI del empleado.
