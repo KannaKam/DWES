@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Prueba" path="/Prueba" reloadable="true" source="org.eclipse.jst.jee.server:Prueba"/><Context docBase="FotogramaPerdidoV0" path="/fotogramav0" reloadable="true" source="org.eclipse.jst.jee.server:FotogramaPerdidoV0"/><Context docBase="Nominas" path="/Nominas" reloadable="true" source="org.eclipse.jst.jee.server:Nominas"/><Context docBase="NominasV2" path="/NominasV2" reloadable="true" source="org.eclipse.jst.jee.server:NominasV2"/></Host>
+      <Context docBase="Prueba" path="/Prueba" reloadable="true" source="org.eclipse.jst.jee.server:Prueba"/><Context docBase="FotogramaPerdidoV0" path="/fotogramav0" reloadable="true" source="org.eclipse.jst.jee.server:FotogramaPerdidoV0"/><Context docBase="Nominas" path="/Nominas" reloadable="true" source="org.eclipse.jst.jee.server:Nominas"/><Context docBase="NominasV2" path="/NominasV2" reloadable="true" source="org.eclipse.jst.jee.server:NominasV2"/><Context docBase="CineMVC" path="/CineMVC" reloadable="true" source="org.eclipse.jst.jee.server:CineMVC"/></Host>
     </Engine>
   </Service>
 </Server>

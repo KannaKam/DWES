@@ -30,20 +30,26 @@
                     <table class="table text-center table-bordered">
                         <thead class="thead">
                             <tr>
+								<th>Director</th>
                                 <th>Título</th>
                                 <th>Fecha</th>
                             </tr>
                         </thead>
                         <tbody>
+	<c:forEach var="pelicula" items="${listaPeliculas}">
+
                                 <tr>
+                                    <td>
+                                        <c:out value="${pelicula.director}" />
+                                    </td>
                                     <td>
                                         <c:out value="${pelicula.titulo}" />
                                     </td>
                                     <td>
                                         <c:out value="${pelicula.fecha}" />
                                     </td>
-                                    
                                 </tr>
+                            </c:forEach>
                             </tbody>
 
                     </table>

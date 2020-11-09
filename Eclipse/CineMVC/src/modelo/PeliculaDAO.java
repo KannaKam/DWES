@@ -29,10 +29,11 @@ public class PeliculaDAO {
 		return dbConnection;
 	}
 	public static List<Pelicula> buscarPeliculas(String directorPK){
+		List<Pelicula> peliculas = new ArrayList<>();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
-		List<Pelicula> peliculas = new ArrayList<>();
+		
 
 		try {
 			connection = getDBConnection();
