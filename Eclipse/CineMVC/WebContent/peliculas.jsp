@@ -20,7 +20,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="./index.jsp"><img src="back.png"></a>
+                <a href="/CineMVC/ServletPelicula?action=form"><img src="back.png"></a>
                 </nav>
 	<div>
 		<div class="container">

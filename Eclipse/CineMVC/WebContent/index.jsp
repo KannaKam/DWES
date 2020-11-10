@@ -20,12 +20,14 @@
 <body>
 	<div>
 		<div class="container">
-            <p>Gestión de películas</p>   
+            <h1 class="text-center">Gestión de películas</h1>  
         </div>
         <div class="container">
            <a href="/CineMVC/ServletPelicula?action=mostrar" class="btn">Info</a>
            <a href="/CineMVC/ServletPelicula?action=form" class="btn">Buscar por director</a>
            <a href="/CineMVC/ServletPelicula?action=login" class="btn">Login</a>
 	</div>
+	</div>
+	
 </body>
 </html>

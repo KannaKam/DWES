@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -49,12 +50,12 @@ public class ServletPelicula extends HttpServlet {
 	private void buscarPeliculas(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String director = request.getParameter("director");
 		List<Pelicula> listaPeliculas = PeliculaDAO.buscarPeliculas(director);
-		if(listaPeliculas != null) {
-			request.setAttribute("listaPeliculas", listaPeliculas);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/peliculas.jsp");
+		if(listaPeliculas.size() == 0) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/error.jsp");
 			dispatcher.forward(request, response);
 		}else {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/error.jsp");
+			request.setAttribute("listaPeliculas", listaPeliculas);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/peliculas.jsp");
 			dispatcher.forward(request, response);
 		}
 		
