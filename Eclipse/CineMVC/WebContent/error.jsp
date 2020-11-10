@@ -22,8 +22,9 @@
                 <a href="/CineMVC/ServletPelicula?action=form"><img src="back.png"></a>
                 </nav>
                 <div class="container">
-                <h1>Error 404</h1>
-                <p>Películas not found</p>
+                <h1>Error 418</h1>
+                <h3>Soy una tetera.</h3>
+                <p>Has intentado hacer café en una tetera.</p>
                 </div>
 
 </body>

@@ -44,6 +44,9 @@ public class ServletPelicula extends HttpServlet {
 		case "mostrar":
 			mostrarInfo(request, response);
 			break;
+		case "login":
+			cargarLogin(request, response);
+			break;
 		}
 	}
 
@@ -62,6 +65,10 @@ public class ServletPelicula extends HttpServlet {
 	}
 	private void cargarFormulario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/form.jsp");
+	    dispatcher.forward(request, response);
+		}
+	private void cargarLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
 	    dispatcher.forward(request, response);
 		}
 	private void mostrarInfo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
