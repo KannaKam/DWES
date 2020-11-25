@@ -55,16 +55,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NominasV2/target/NominasV2-1.0.war" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,17 +72,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 9.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.38" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -238,6 +227,7 @@
       <workItem from="1606211963214" duration="31000" />
       <workItem from="1606213534475" duration="27000" />
       <workItem from="1606213963758" duration="122000" />
+      <workItem from="1606289060438" duration="2722000" />
     </task>
     <servers />
   </component>
@@ -273,10 +263,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="3" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606214057533" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606214035449">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606292885182">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606214035449" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606292885182" />
     <state x="1829" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606211989790" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1606128807356">
       <screen x="1366" y="0" width="1366" height="728" />
@@ -294,14 +284,15 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606128807356" />
-    <state x="306" y="55" width="940" height="673" key="Maven.ArtifactSearchDialog" timestamp="1606213560832">
+    <state x="319" y="34" width="940" height="673" key="Maven.ArtifactSearchDialog" timestamp="1606292862507">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="306" y="55" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606213560832" />
+    <state x="319" y="34" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606292862507" />
     <state x="1672" y="55" width="940" height="673" key="Maven.ArtifactSearchDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606132664436" />
-    <state x="1529" y="0" key="SettingsEditor" timestamp="1606131486680">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1606292528351">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606292528351" />
     <state x="1529" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606131486680" />
     <state x="1695" y="47" key="spring file set editor" timestamp="1606131386432">
       <screen x="1366" y="0" width="1366" height="728" />
