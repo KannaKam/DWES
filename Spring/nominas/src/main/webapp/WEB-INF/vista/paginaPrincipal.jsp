@@ -43,11 +43,11 @@
 				<c:forEach var="empleado" items="${empleados}">
 				
 						<c:url var="actualizar" value="actualizar">
-						<c:param name="empleadoId" value="${empleado.id}"></c:param>
+						<c:param name="idEmpleado" value="${empleado.id}"></c:param>
 						</c:url>
 
 					<c:url var="eliminar" value="eliminar">
-						<c:param name="empleadoId" value="${empleado.id}"></c:param>
+					<c:param name="idEmpleado" value="${empleado.id}"></c:param>
 					</c:url>
 
                                 <tr>
@@ -67,8 +67,8 @@
                                         <c:out value="${empleado.categoria}" />
                                     </td>
                                      <td colspan="2" id="acc">
-                                    <a href="actualizar" class="btn btn-warning">Actualizar</a>
-                                    <a href="eliminar" class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${empleado.nombre}?'))) return false">Eliminar</a>
+                                    <a href=${actualizar } class="btn btn-warning">Actualizar</a>
+                                    <a href=${eliminar } class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${empleado.nombre}?'))) return false">Eliminar</a>
                                     </td>
                                 </tr>
                             </c:forEach>

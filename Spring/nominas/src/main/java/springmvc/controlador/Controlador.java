@@ -63,4 +63,14 @@ public class Controlador {
 		return "formulario";
 	}
 	
+	@GetMapping("/actualizar")
+	public String actualizarUsuario(@RequestParam("idEmpleado") int id, Model model) {
+		
+		Empleado empleado = servicio.traerEmpleado(id);
+		
+		model.addAttribute("empleado", empleado);
+		
+		return "formulario";
+	}
+	
 }
