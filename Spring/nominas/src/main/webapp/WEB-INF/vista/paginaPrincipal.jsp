@@ -15,6 +15,10 @@
 	.btn{
 		color: #fff;
 		background-color:#2e5d94;
+		border: 0px solid;
+	}
+	#acc{
+		width: 25%;
 	}
 </style>
 </head>
@@ -32,11 +36,11 @@
                                 <th>Sexo</th>
                                 <th>Categoría</th>
                                 <th>Años</th>
-                                <th>Acciones</th>
+                                <th colspan="2">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-				<c:forEach var="empleado" items="${listaEmpleado}">
+				<c:forEach var="empleado" items="${empleados}">
 				
 						<c:url var="actualizar" value="actualizar">
 						<c:param name="empleadoId" value="${empleado.id}"></c:param>
@@ -57,23 +61,41 @@
                                         <c:out value="${empleado.sexo}" />
                                     </td>
                                     <td>
-                                        <c:out value="${empleado.anyos}" />
+                                        <c:out value="${empleado.antiguedad}" />
                                     </td>
                                      <td>
                                         <c:out value="${empleado.categoria}" />
                                     </td>
-                                    <td>
-                                    <a href="${actualizar}" class="btn btn-warning">Actualizar</a>
+                                     <td colspan="2" id="acc">
+                                    <a href="actualizar" class="btn btn-warning">Actualizar</a>
+                                    <a href="eliminar" class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${empleado.nombre}?'))) return false">Eliminar</a>
                                     </td>
-									<td>
-									<a href="${eliminar}" class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${empleado.nombre}?'))) return false">Eliminar</a>
-									</td>
                                 </tr>
                             </c:forEach>
                             </tbody>
 
                     </table>
-                    <a href="" class="btn">Gestionar empleados</a>
+                    <div class="container">
+                    <a href="formulario" class="btn btn-primary">Añadir empleado</a>
+                    </div>
+                    <div class="container card col-md-5 justify-content-center">
+                    	<form action="salario" method="POST">
+                   		 <div class="container">
+                   		 <br>
+                   		 <h3>DNI</h3>
+                    		<input pattern="\d{8}[A-HJ-NP-TV-Z]" type="text" placeholder="Introduce el dni" name="dni" class="form-control" required="required" />
+                   			<br>
+                   			<input type="submit" class="btn btn-success" value="Mostrar salario" />
+                   			<br>
+                   			<br>
+                   		 </div>
+						</form>
+						 <div>
+					</div>
+						<p>Nombre: ${nombre}</p>
+						<p>Salario: ${sueldo}</p>
+					</div>
+					
                     </div>
                     
 	</div>
