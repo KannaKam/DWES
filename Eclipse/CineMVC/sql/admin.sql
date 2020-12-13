@@ -27,18 +27,20 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `admin`
 --
-
+DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
+  `idAdmin` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(120) DEFAULT NULL,
-  `pass` varchar(120) DEFAULT NULL
+  `pass` varchar(120) DEFAULT NULL,
+   PRIMARY KEY (`idAdmin`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `admin`
 --
 
-INSERT INTO `admin` (`nombre`, `pass`) VALUES
-('olga', '1234');
+INSERT INTO `admin` (`idAdmin`, `nombre`, `pass`) VALUES
+(1, 'olga', '1234');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

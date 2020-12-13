@@ -27,19 +27,23 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `pelicula`
 --
 
+DROP TABLE IF EXISTS `pelicula`;
+
 CREATE TABLE `pelicula` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `director` varchar(128) DEFAULT NULL,
   `titulo` varchar(128) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL
+  `fecha` datetime DEFAULT NULL,
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `pelicula`
 --
 
-INSERT INTO `pelicula` (`director`, `titulo`, `fecha`) VALUES
-('Hayao Miyazaki', 'Tonari no Totoro', '1988-01-01 00:00:00'),
-('Oliver Nakache', 'Intouchables', '2011-11-02 00:00:00');
+INSERT INTO `pelicula` (`id`, `director`, `titulo`, `fecha`) VALUES
+(1, 'Hayao Miyazaki', 'Tonari no Totoro', '1988-01-01 00:00:00'),
+(2, 'Oliver Nakache', 'Intouchables', '2011-11-02 00:00:00');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
