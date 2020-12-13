@@ -83,7 +83,7 @@
                    		 <div class="container">
                    		 <br>
                    		 <h3>DNI</h3>
-                    		<input pattern="\d{8}[A-HJ-NP-TV-Z]" type="text" placeholder="Introduce el dni" name="dni" class="form-control" required="required" />
+                    		<input pattern="\d{8}[A-HJ-NP-TV-Z]" type="text" placeholder="Introduce el dni" name="dniEmpleado" class="form-control" required="required" />
                    			<br>
                    			<input type="submit" class="btn btn-success" value="Mostrar salario" />
                    			<br>

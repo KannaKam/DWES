@@ -31,7 +31,7 @@
 			modelAttribute="empleado" method="POST">
 			
 			<f:hidden path="id" />
-			<f:hidden path="nomina.dni"/>
+			<f:hidden path="nomina.dniEmpleado"/>
 			
 			<div class="form-group">
 				<label>Nombre:</label>

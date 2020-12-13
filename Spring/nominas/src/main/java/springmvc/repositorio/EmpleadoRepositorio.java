@@ -7,7 +7,7 @@ import springmvc.entidades.*;
 
 public interface EmpleadoRepositorio extends JpaRepository<Empleado, Integer>{
 	
-	@Query("FROM Nomina WHERE dni = ?1")
-	public Nomina getNomina(String dni);
+	@Query("FROM nomina WHERE dniEmpleado = ?1")
+	public Nomina getNomina(String dniEmpleado);
 	
 }
