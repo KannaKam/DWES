@@ -36,10 +36,14 @@ public class Controlador {
 		model.addAttribute("peliculas", peliculas);
 
 		for(Pelicula pelicula:peliculas) {
-			if(!pelicula.getDirector().equals(director)) {
-				 
-				return "paginaError";
+			if(pelicula.getDirector().equals(director)) {
 				
+				model.addAttribute("director", pelicula.getDirector());
+				model.addAttribute("titulo", pelicula.getTitulo());
+				model.addAttribute("fecha", pelicula.getFecha());
+				
+			}else {
+				return "paginaError";
 			}
 		}
 		return "/lista";
