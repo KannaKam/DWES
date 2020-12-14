@@ -13,13 +13,15 @@
 	.btn{
 		color: #fff;
 		background-color:#2e5d94;
+		border: 0px;
 	}
 </style>
 <title>Error</title>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="paginaPrincipal"><img src="./back.png"></a>
+                <a href="paginaPrincipal">Volver</a>
                 </nav>
                 <div class="container">
                 <h1>Error 418</h1>

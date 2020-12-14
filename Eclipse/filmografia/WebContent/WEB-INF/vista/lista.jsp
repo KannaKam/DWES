@@ -15,12 +15,13 @@
 	.btn{
 		color: #fff;
 		background-color:#2e5d94;
+		border: 0px;
 	}
 </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="paginaPrincipal"><img src="back.png"></a>
+                <a href="paginaPrincipal">Volver</a>
                 </nav>
 	<div>
 		<div class="container">
@@ -33,8 +34,17 @@
 								<th>Director</th>
                                 <th>Título</th>
                                 <th>Fecha</th>
-                                <th>Acciones</th>
-                                <th colspan="2">Acciones</th>
+                                
+                                <c:set var="admin" value="${logged}" />
+										<c:choose>
+								    		<c:when test="${logged == true}">
+								    		<th colspan="2">Acciones</th>
+								      	  		</c:when>
+								   		 <c:otherwise>
+								      		  <th colspan="2" style="display:none">Acciones</th>
+								      		  </c:otherwise>      
+										</c:choose>
+										
                             </tr>
                         </thead>
                         <tbody>
@@ -58,20 +68,24 @@
                                     <td>
                                         <c:out value="${pelicula.fecha}" />
                                     </td>
-                                    <td colspan="2" id="acc">
+                                    
                                     	<c:set var="admin" value="${logged}" />
 										<c:choose>
 								    		<c:when test="${logged == true}">
+								    		<td colspan="2" id="acc">
 								      	  		<a href=${actualizar } class="btn btn-warning">Actualizar</a>
 								                <a href=${eliminar } class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${pelicula.titulo}?'))) return false">Eliminar</a>
+								   		 	 </td>	
 								   		 	</c:when>
 								   		 <c:otherwise>
+								   		 <td colspan="2" id="acc" style="display:none">
 								      		  <a href=${actualizar } class="btn btn-warning" style="display:none">Actualizar</a>
 								              <a href=${eliminar } class="btn btn-danger" style="display:none" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${pelicula.titulo}?'))) return false">Eliminar</a>
+								    	</td>
 								    	</c:otherwise>      
 										</c:choose>
                                     
-                                    </td>
+                                   
                                 </tr>
                                  </c:forEach>
                                  </tbody>
@@ -79,34 +93,17 @@
                                  </div>
                            
                                 <div class="container">
-                   		 <br>
-                   		 <h3>Directores</h3>
-                   		 <form action="lista" method="GET">
-                   			<input type="submit" class="btn btn-success" value="Mostrar directores" />
-                   			<br>
-                   			<br>
+                                <div class="container">
+                                <form action="listaDirectores" method="GET">
+                   			<input type="submit" class="btn btn-success" value="Finalizar" />
                    			</form>
+                                </div>
+                   		 	<div class="container">
+                   			<form action="director" method="GET">
+                   			<input type="submit" class="btn btn-success" value="Realizar nueva consulta" />
+                   			</form>
+                   		 	</div>
                    		 </div>
-						
-						 <div>	
-						 <table>
-						 	<thead>
-						 		<tr>
-						 			<th>Nombre</th>
-						 		</tr>
-						 	</thead>
-							<tbody>
-								<c:forEach var="director" items="${directores}">
-								<tr>
-                                    <td>
-                                        <c:out value="${empleado.nombre}" />
-                                    </td> 
-                                 </tr>
-                                 </c:forEach>
-							</tbody>
-                    	 </table>
-                    </div>
-                    
 	</div>
 </body>
 </html>

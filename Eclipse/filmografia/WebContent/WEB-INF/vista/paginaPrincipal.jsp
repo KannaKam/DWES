@@ -15,34 +15,30 @@
 	.btn{
 		color: #fff;
 		background-color:#2e5d94;
+		border: 0px;
+	}
+	.container{
+	display: block;
+		margin-top: 10%;
+		text-align:center;
 	}
 </style>
 <title>Filmografía</title>
 </head>
 <body>
-<div>
-		<div class="container">
-                      <h1 class="text-center">¡Bienvenido!</h1>   
-                    </div>
-                    <div class="container">
-                    <p>Está página contiene una cantidad ínfima de películas, pero vaya, que sirve más o menos.</p>
-                    <div class="container card col-md-5 justify-content-center">
-                    	<form action="lista" method="GET">
-                   		 <div class="container">
-                   		 <br>
-                   		 <h3>Director</h3>
-                    		<input type="text" placeholder="Introduce el nombre del director" name="director" class="form-control" required="required" />
-                   			<br>
-                   			<input type="submit" class="btn btn-warning" value="Mostrar peliculas" />
-                   			<br>
-                   			<br>
-                   		 </div>
-						</form>
-						 <div>
-					</div>
-                    
-	</div>
-	<a href="login" class="btn btn-success">Login</a>
+<div class="container">
+	<h1>Página principal</h1>
+	<c:set var="admin" value="${logged}" /> <!-- This same as your request attribute -->
+		<c:choose>
+    		<c:when test="${logged == false}">
+      	  		<a href="logout" class="btn btn-success">Logout</a>
+   		 	</c:when>
+   		 <c:otherwise>
+      		  <a href="login" class="btn btn-success">Login</a>
+    	</c:otherwise>      
+</c:choose>
+	<a href="info" class="btn btn-warning">Info</a>
+	<a href="director" class="btn btn-danger">Búsqueda por director</a>
 	<c:set var="admin" value="${logged}" /> <!-- This same as your request attribute -->
 		<c:choose>
     		<c:when test="${logged == true}">
@@ -53,7 +49,6 @@
     	</c:otherwise>      
 </c:choose>
 	
-	</div>
 	</div>
 </body>
 </html>

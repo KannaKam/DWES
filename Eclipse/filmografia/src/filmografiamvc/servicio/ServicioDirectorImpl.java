@@ -17,7 +17,7 @@ public class ServicioDirectorImpl implements ServicioDirector {
 	
 	@Override
 	@Transactional
-	public List<Director> listaDirectores() {
+	public List<Director> mostrarDirectores() {
 		List<Director> directores = repositorio.findAll();
 		
 		return directores;

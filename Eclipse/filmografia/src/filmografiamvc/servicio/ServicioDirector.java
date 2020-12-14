@@ -9,7 +9,7 @@ import filmografiamvc.entidades.Director;
 @Service
 public interface ServicioDirector {
 
-	public List <Director> listaDirectores();
+	public List <Director> mostrarDirectores();
 	
 	public void guardarDirector(Director director);
 	

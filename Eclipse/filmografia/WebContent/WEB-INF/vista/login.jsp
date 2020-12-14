@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,35 +15,38 @@
 		background-color:#2e5d94;
 		border: 0px solid;
 	}
+	input{
+		text-align:center;
+	}
 </style>
 <title>Login</title>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="paginaPrincipal"><img src="./back.png"></a>
+                <a href="paginaPrincipal">Volver</a>
                 </nav>
                 <div class="container">
                 <h1 class="text-center">Login</h1>
                 </div>
                 <div class="container card col-md-5 justify-content-center">
-                <f:form action="login"
-			modelAttribute="admin" method="POST">
-			
-			<f:hidden path="id" />
-			
-			<div class="form-group">
-				<label>Usuario:</label>
-				<f:input path="nombre" type="text" class="form-control" required="required"></f:input>
-			</div>
-			<div class="form-group">
-				<label>Contraseña:</label>
-				<f:input path="pass" type="password" class="form-control" required="required"></f:input>
-			</div>
-
-			<input class="btn btn-success" type="submit" value="Entrar">
-
-		</f:form>
+                <form method="POST" action="login">
+                <br>
+                <div class="form-group">
+                	<label>Usuario:</label>
+					<input type="text" name="nombre" required="required">
                 </div>
+					<div class="form-group">
+					<label>Contraseña:</label>
+					<input type="password" name="pass" required="required">
+					</div>
+					<div class="form-group">
+                <input class="btn btn-success" type="submit" value="Entrar">
+                </div>
+				</form>
+                </div>
+                
+				
 
 </body>
 </html>

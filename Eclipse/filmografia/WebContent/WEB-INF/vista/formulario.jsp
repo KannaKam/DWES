@@ -20,8 +20,9 @@
 <title>Peliculas</title>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-md navbar-dark">
-                <a href="paginaPrincipal"><img src="./back.png"></a>
+                <a href="paginaPrincipal">Volver</a>
                 </nav>
                 <div class="container">
                 <h1 class="text-center">Peliculas</h1>
