@@ -35,19 +35,11 @@ public class Controlador {
 		List<Pelicula> peliculas = servicio.buscarPelicula(director);
 		model.addAttribute("peliculas", peliculas);
 
-		for(Pelicula pelicula:peliculas) {
-			if(pelicula.getDirector().equals(director)) {
-				
-				model.addAttribute("director", pelicula.getDirector());
-				model.addAttribute("titulo", pelicula.getTitulo());
-				model.addAttribute("fecha", pelicula.getFecha());
-				
-			}else {
-				return "paginaError";
-			}
+		if (peliculas == null) {
+			return "paginaError";
+		}else {
+			return "/lista";
 		}
-		return "/lista";
-		
 	}
 	
 	@GetMapping("/formulario")
@@ -58,6 +50,20 @@ public class Controlador {
 		model.addAttribute("pelicula", pelicula);
 
 		return "formulario";
+	}
+	
+	@PostMapping("/login")
+	public String log(@RequestParam("nombre")String nombre, @RequestParam("pass") String pass, Model model) {
+		
+		Admin admin = new Admin();
+		
+		
+		if(admin.getNombre().equals(nombre) && admin.getPass().equals(pass)) {
+			admin.setLogged(true);
+			return "login";
+		}else {
+			return "errorLogin";
+		}
 	}
 	
 	@GetMapping("/actualizar")

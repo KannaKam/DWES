@@ -59,8 +59,18 @@
                                         <c:out value="${pelicula.fecha}" />
                                     </td>
                                     <td colspan="2" id="acc">
-                                    <a href=${actualizar } class="btn btn-warning">Actualizar</a>
-                                    <a href=${eliminar } class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${pelicula.titulo}?'))) return false">Eliminar</a>
+                                    	<c:set var="admin" value="${logged}" />
+										<c:choose>
+								    		<c:when test="${logged == true}">
+								      	  		<a href=${actualizar } class="btn btn-warning">Actualizar</a>
+								                <a href=${eliminar } class="btn btn-danger" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${pelicula.titulo}?'))) return false">Eliminar</a>
+								   		 	</c:when>
+								   		 <c:otherwise>
+								      		  <a href=${actualizar } class="btn btn-warning" style="display:hidden">Actualizar</a>
+								              <a href=${eliminar } class="btn btn-danger" style="display:hidden" onclick="if (!(confirm('¿Seguro que quieres eliminar a ${pelicula.titulo}?'))) return false">Eliminar</a>
+								    	</c:otherwise>      
+										</c:choose>
+                                    
                                     </td>
                                 </tr>
                             </c:forEach>

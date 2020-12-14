@@ -42,7 +42,17 @@
                     
 	</div>
 	<a href="login" class="btn btn-success">Login</a>
-	<a href="formulario" class="btn btn-success">Añadir pelicula</a>
+	<c:set var="admin" value="${logged}" /> <!-- This same as your request attribute -->
+		<c:choose>
+    		<c:when test="${logged == true}">
+      	  		<a href="formulario" class="btn btn-success">Añadir pelicula</a>
+   		 	</c:when>
+   		 <c:otherwise>
+      		  <a href="formulario" class="btn btn-success" style="display:none">Añadir pelicula</a>
+    	</c:otherwise>      
+</c:choose>
+	
+	</div>
 	</div>
 </body>
 </html>

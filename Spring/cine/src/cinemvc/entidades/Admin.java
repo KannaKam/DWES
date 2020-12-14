@@ -17,13 +17,24 @@ public class Admin {
 	@Column(name="pass")
 	private String pass;
 	
+	private boolean logged;
+	
 	public Admin() {
 		
 	}
 	
-	public Admin(String nombre, String pass) {
+	public Admin(String nombre, String pass, boolean logged) {
 		this.nombre = nombre;
 		this.pass = pass;
+		this.logged = logged;
+	}
+
+	public boolean isLogged() {
+		return logged;
+	}
+
+	public void setLogged(boolean logged) {
+		this.logged = logged;
 	}
 
 	public int getId() {
