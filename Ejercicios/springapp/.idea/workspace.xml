@@ -55,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Spring/SprinMVCv5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -228,6 +228,7 @@
       <workItem from="1606213534475" duration="27000" />
       <workItem from="1606213963758" duration="122000" />
       <workItem from="1606289060438" duration="2722000" />
+      <workItem from="1610359385768" duration="633000" />
     </task>
     <servers />
   </component>
@@ -263,10 +264,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="3" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606214057533" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606292885182">
+    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1610359389399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1606292885182" />
+    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610359389399" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1610360305554">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610360305554" />
     <state x="1829" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1606211989790" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1606128807356">
       <screen x="1366" y="0" width="1366" height="728" />
