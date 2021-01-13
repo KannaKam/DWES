@@ -1,9 +1,9 @@
-package main.java.com.springmvcv5.springapp;
+package com.springmvcv5.springapp;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import main.java.com.springmvcv5.springapp.business.SpringappBusinessConfig;
-import main.java.com.springmvcv5.springapp.web.SpringappWebConfig;
+import com.springmvcv5.springapp.business.SpringappBusinessConfig;
+import com.springmvcv5.springapp.web.SpringappWebConfig;
 
 public class SpringappWebApplicationInitilizer extends AbstractAnnotationConfigDispatcherServletInitializer{
 

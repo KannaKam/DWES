@@ -1,4 +1,6 @@
-package main.java.com.springmvcv5.springapp.web.controllers;
+package com.springmvcv5.springapp.web.controllers;
+
+import java.util.Date;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,9 +13,10 @@ public class HelloController {
 
     protected final Log logger = LogFactory.getLog(getClass());
 
-    @RequestMapping(value="/hello.htm")
+    @RequestMapping(value = "/hello.htm")
     public ModelAndView handleRequest() {
-        logger.info("Returning hello view");
-        return new ModelAndView("hello.jsp");
+        String now = (new Date()).toString();
+        logger.info("Returning hello view with " + now);
+        return new ModelAndView("hello", "now", now);
     }
 }
