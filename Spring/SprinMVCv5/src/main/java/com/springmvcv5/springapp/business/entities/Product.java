@@ -1,10 +1,29 @@
 package com.springmvcv5.springapp.business.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="products")
 public class Product {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     private String description;
     private Double price;
     
+    public Integer getId()
+    {
+        return id;
+    }
+
+    public void setId(Integer id)
+    {
+        this.id = id;
+    }
+
     public String getDescription() {
         return description;
     }
