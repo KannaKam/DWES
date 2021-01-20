@@ -1,4 +1,4 @@
-package springmvc.entidades;
+package com.nominas.nomina.entidades;
 
 import javax.persistence.*;
 

@@ -1,8 +1,11 @@
 package com.nominas.nomina.servicio;
 
+import com.nominas.nomina.entidades.Empleado;
+import com.nominas.nomina.entidades.Nomina;
+
 import java.util.List;
 
-import springmvc.entidades.*;
+
 
 public interface ServicioEmpleado {
 

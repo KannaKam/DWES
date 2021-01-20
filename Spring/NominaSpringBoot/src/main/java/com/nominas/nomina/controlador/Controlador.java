@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import springmvc.entidades.*;
-import springmvc.servicio.*;
+import com.nominas.nomina.entidades.*;
+import com.nominas.nomina.servicio.*;
 
 
 
@@ -30,6 +30,7 @@ public class Controlador {
 		List<Empleado> empleados = servicio.listarEmpleados();
 
 		model.addAttribute("empleados", empleados);
+		System.out.println(empleados);
 
 		return "paginaPrincipal";
 	}

@@ -1,5 +1,9 @@
 package com.nominas.nomina.entidades;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +13,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "nomina")
 public class Nomina {
 
@@ -18,7 +26,7 @@ public class Nomina {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "dniEmpleado")
+    @Column(name = "dni")
     private String dni;
 
     @Column(name = "sueldo")
@@ -29,47 +37,6 @@ public class Nomina {
     
     private static final int SUELDO_BASE[] = { 50000, 70000, 90000, 110000, 130000, 150000, 170000, 190000, 210000,
             230000 };
-
-    public Nomina() {
-    }
-
-    public Nomina(int id, String dni, int sueldo) {
-    	this.id = id;
-        this.dni = dni;
-        this.sueldo = sueldo;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public int getSueldo() {
-        return sueldo;
-    }
-
-    public void setSueldo(int sueldo) {
-        this.sueldo = sueldo;
-    }
-
-	public Empleado getEmpleado() {
-		return empleado;
-	}
-
-	public void setEmpleado(Empleado empleado) {
-		this.empleado = empleado;
-	}
     
 	public int sueldo(int categoria, int anyos) {
         int sueldo;

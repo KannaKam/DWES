@@ -1,14 +1,15 @@
 package com.nominas.nomina.servicio;
 
+import com.nominas.nomina.entidades.Empleado;
+import com.nominas.nomina.entidades.Nomina;
+import com.nominas.nomina.repositorio.EmpleadoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import springmvc.entidades.*;
-import springmvc.repositorio.EmpleadoRepositorio;
-
 import java.util.List;
 import java.util.Optional;
+
 
 @Service
 public class ServicioEmpleadoImpl implements ServicioEmpleado{
@@ -19,7 +20,7 @@ public class ServicioEmpleadoImpl implements ServicioEmpleado{
 	@Override
 	@Transactional
 	public Empleado traerEmpleado(int id) {
-		Optional <Empleado> empleadoOp = repositorio.findById(id);
+		Optional<Empleado> empleadoOp = repositorio.findById(id);
 		
 		Empleado empleado = empleadoOp.get();
 		return empleado;
@@ -40,12 +41,10 @@ public class ServicioEmpleadoImpl implements ServicioEmpleado{
 	}
 
 	@Override
-	@Transactional
 	public void guardarEmpleado(Empleado empleado) {
-		
 		repositorio.save(empleado);
-		
 	}
+
 
 	@Override
 	@Transactional
