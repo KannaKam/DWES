@@ -39,7 +39,6 @@
             </tr>
             </thead>
             <tbody>
-
             <tr tl:each="empleado : ${empleados}">
                 <td tl:text="${empleado.nombre}"></td>
                 <td tl:text="${empleado.dni}"></td>
@@ -49,7 +48,7 @@
                 <td colspan="2" id="acc">
                     <a tl:action="@{/controlador/actualizar}" class="btn btn-warning">Actualizar</a>
                     <a tl:action="@{/controlador/eliminar}" class="btn btn-danger"
-                       onclick="if (!(confirm('�Seguro que quieres eliminar a ${empleado.nombre}?'))) return false">Eliminar</a>
+                       onclick="if (!(confirm('¿Seguro que quieres eliminar a ${empleado.nombre}?'))) return false">Eliminar</a>
                 </td>
             </tr>
             </tbody>
@@ -59,7 +58,7 @@
             <a href="formulario" class="btn btn-primary">Añadir empleado</a>
         </div>
         <div class="container card col-md-5 justify-content-center">
-            <form tl:action="@{/controlador/salario}" method="POST">
+            <form tl:action="@{/controlador/salario}" method="post">
                 <div class="container">
                     <br>
                     <h3>DNI</h3>

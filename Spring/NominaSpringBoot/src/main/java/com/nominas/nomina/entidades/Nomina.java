@@ -26,7 +26,7 @@ public class Nomina {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "dni")
+    @Column(name = "dniEmpleado")
     private String dni;
 
     @Column(name = "sueldo")
