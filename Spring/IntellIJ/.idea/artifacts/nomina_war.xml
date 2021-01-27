@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="nomina:war">
+    <output-path>$PROJECT_DIR$/../NominaSpringBoot/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>nomina</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="nomina-1.0.war">
+      <element id="artifact" artifact-name="nomina:war exploded" />
+    </root>
+  </artifact>
+</component>

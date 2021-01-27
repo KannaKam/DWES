@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/IntellIJ.iml" filepath="$PROJECT_DIR$/.idea/IntellIJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../NominaSpringBoot/nomina.iml" filepath="$PROJECT_DIR$/../NominaSpringBoot/nomina.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SprinMVCv5/springmvcv5.iml" filepath="$PROJECT_DIR$/../SprinMVCv5/springmvcv5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../RestaurantSupplierManagement/supplier.iml" filepath="$PROJECT_DIR$/../RestaurantSupplierManagement/supplier.iml" />
+    </modules>
+  </component>
+</project>
