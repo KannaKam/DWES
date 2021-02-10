@@ -1,10 +1,10 @@
-package com.olgibaba.onlinesupplier;
+package com.olgibaba.restaurant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OnlinesupplierApplicationTests {
+class RestaurantApplicationTests {
 
     @Test
     void contextLoads() {

@@ -100,6 +100,7 @@ public class Controlador {
 
 		return "redirect:/controlador/paginaPrincipal";
 	}
+
 	
 	@GetMapping("/eliminar")
 	public String eliminarEmpleado(@RequestParam("empleadoId") int id) {
