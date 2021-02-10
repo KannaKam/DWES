@@ -8,11 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="nomina" />
         <module name="springmvcv5" />
-        <module name="supplier" />
+        <module name="restaurant" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="nomina" target="1.8" />
+      <module name="restaurant" target="1.8" />
       <module name="springmvcv5" target="11" />
       <module name="supplier" target="1.8" />
     </bytecodeTargetLevel>
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="nomina" options="-parameters" />
+      <module name="restaurant" options="-parameters" />
       <module name="supplier" options="-parameters" />
     </option>
   </component>

@@ -46,4 +46,7 @@ public class UserRestaurant {
     @OneToMany(mappedBy = "restaurant")
     @JsonManagedReference
     private List<Orders> ordersList = new ArrayList<>();
+
+    public UserRestaurant(String mail, String password, String country, String postcode, String city, String address) {
+    }
 }

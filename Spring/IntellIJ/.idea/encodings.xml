@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../NominaSpringBoot/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../NominaSpringBoot/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../RestaurantSupplierManagement/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../RestaurantSupplierManagement/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../SprinMVCv5/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../SprinMVCv5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../restaurant/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../restaurant/src/main/resources" charset="UTF-8" />
   </component>
 </project>
